@@ -48,14 +48,25 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jTextField1" pref="305" max="32767" attributes="0"/>
-                          <Component id="jTextField2" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextField1" pref="305" max="32767" attributes="0"/>
+                                  <Component id="jTextField2" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel1" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="user" min="-2" pref="79" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace min="0" pref="107" max="32767" attributes="0"/>
               </Group>
@@ -65,15 +76,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="user" min="-2" pref="75" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jTextField1" min="-2" pref="39" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="jTextField2" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace pref="94" max="32767" attributes="0"/>
+                  <EmptySpace pref="63" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -90,9 +105,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="login" min="-2" pref="213" max="-2" attributes="0"/>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="login" min="-2" pref="186" max="-2" attributes="0"/>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -100,8 +115,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="login" min="-2" pref="164" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="login" min="-2" pref="155" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -109,9 +124,6 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="login">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/tnd/logo-cortado.jpg"/>
-                </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[100, 100]"/>
                 </Property>
@@ -151,6 +163,10 @@
             </Property>
             <Property name="text" type="java.lang.String" value="CONTRASE&#xd1;A"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="user">
         </Component>
       </SubComponents>
     </Container>
