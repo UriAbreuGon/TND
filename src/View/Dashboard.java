@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package View;
+
+import model.Usuarios;
+
 
 /**
  *
@@ -10,11 +10,21 @@ package View;
  */
 public class Dashboard extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Dashboard
-     */
+    Usuarios mod;
+    
     public Dashboard() {
         initComponents();
+    }
+    
+    public Dashboard(Usuarios mod){
+        
+        initComponents();
+        setLocationRelativeTo(null);
+        this.mod = mod;
+        
+        if(mod.getIdUsuario() == 1){
+            
+        } else if(mod.getIdUsuario())
     }
 
     /**

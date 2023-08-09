@@ -1,9 +1,6 @@
 package model;
 
-/**
- *
- * @author Anderson
- */
+
 public class Usuarios {
     
     private int idUsuario;
@@ -12,7 +9,8 @@ public class Usuarios {
     private String password;
     private String correo;
     private String telefono;
-    private String tipoUsuario;
+    private int tipoUsuario;
+    private String nombre_tipo;
     
 
     public void setIdUsuario(int idUsuario) {
@@ -63,13 +61,23 @@ public class Usuarios {
         return telefono;
     }
     
-    public String getTipoUsuario() {
+    public int getTipoUsuario() {
         return tipoUsuario;
     }
 
-    public void setTipoUsuario(String tipoUsuario) {
+    public void setTipoUsuario(int tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
+
+    public String getNombre_tipo() {
+        return nombre_tipo;
+    }
+
+    public void setNombre_tipo(String nombre_tipo) {
+        this.nombre_tipo = nombre_tipo;
+    }
+    
+    
     
 }
     
