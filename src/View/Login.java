@@ -206,11 +206,10 @@ public class Login extends javax.swing.JFrame {
                 
                
                 
-                this.dispose();
-                
-                Dashboard dashboard = new Dashboard();
-                frmDashboard.setVisible(true);
-        
+                if(frmDashboard == null){
+            frmDashboard = new Dashboard();
+            frmDashboard.setVisible(true);
+        }
                 
                 
             
