@@ -21,6 +21,7 @@ public class Login extends javax.swing.JFrame {
     public static SignIn frmRegistro;
     public static Dashboard frmDashboard;
     public static Login frmLogin;
+    public static DashboardAdmin frmDashboardAdmin;
     
     
     public Login() {
@@ -189,31 +190,39 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        
+
         SqlUsuarios modSql = new SqlUsuarios();
         Usuarios mod = new Usuarios();
-        
+
         String pass = new String(txtPassword.getText());
-        
-        if(!txtUsuario.getText().equals("") && !pass.equals("")){
-            
+
+        if (!txtUsuario.getText().equals("") && !pass.equals("")) {
+
             String nuevoPass = Hash.sha1(pass);
-            
+
             mod.setUsuario(txtUsuario.getText());
             mod.setPassword(nuevoPass);
-            
-            if(modSql.login(mod)){
-                
-               
-                
-                if(frmDashboard == null){
-            frmDashboard = new Dashboard();
-            frmDashboard.setVisible(true);
-        }
-                
-                
-            
-            } else{
+            mod.getTipoUsuario();
+
+            if (modSql.login(mod)) {
+
+                if (mod.getTipoUsuario() == 2) {
+
+                    if (frmDashboard == null) {
+                        frmDashboard = new Dashboard();
+                        frmDashboard.setVisible(true);
+                    }
+
+                } else if (mod.getTipoUsuario() == 1) {
+
+                    if (frmDashboardAdmin == null) {
+                        frmDashboardAdmin = new DashboardAdmin();
+                        frmDashboardAdmin.setVisible(true);
+
+                    }
+                }
+
+            } else {
                 JOptionPane.showMessageDialog(null, "Datos incorrecto");
             }
         } else {

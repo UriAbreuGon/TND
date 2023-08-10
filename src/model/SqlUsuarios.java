@@ -44,7 +44,7 @@ public class SqlUsuarios extends ConexionMysql {
         ResultSet rs = null;
         Connection con = conectar();
 
-        String sql = "SELECT u.IDusuario, u.NomU, u.Usuario, u.Password, u.Correo, u.Telefono, u.IdTipo   FROM usuarios AS u WHERE usuario = ?";
+        String sql = "SELECT u.IDusuario, u.NomU, u.Usuario, u.Password, u.Correo, u.Telefono, u.IdTipo FROM usuarios AS u  WHERE usuario = ?";
 
         try {
             ps = (PreparedStatement) con.prepareStatement(sql);
@@ -61,7 +61,10 @@ public class SqlUsuarios extends ConexionMysql {
                     usr.setTelefono(rs.getString(6));
                     usr.setTipoUsuario(rs.getInt(7));
                     
+                    
                     return true;
+                    
+                    
 
                 } else {
                     return false;
@@ -114,4 +117,6 @@ public class SqlUsuarios extends ConexionMysql {
 
         return matcher.find();
     }
+    
+  
 }

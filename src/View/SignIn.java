@@ -256,7 +256,7 @@ public class SignIn extends javax.swing.JFrame {
                     mod.setNombre(txtNombre.getText());
                     mod.setCorreo(txtCorreo.getText());
                     mod.setTelefono(txtTelefono.getText());
-                    mod.setTipoUsuario(1);
+                    mod.setTipoUsuario(2);
 
                     if (modSql.registrar(mod)) {
                         JOptionPane.showMessageDialog(null, "Registro guardado");
