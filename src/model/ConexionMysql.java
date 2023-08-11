@@ -4,6 +4,7 @@ package model;
 
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
@@ -18,7 +19,7 @@ public class ConexionMysql {
             cn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/dbtnd","root", "");
             System.out.println("Conectado");
              
-        } catch (Exception e){
+        } catch (ClassNotFoundException | SQLException e){
             System.out.println("Error " + e);
         }
         return cn;
