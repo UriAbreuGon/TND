@@ -76,6 +76,14 @@ public class Usuarios {
     public void setNombre_tipo(String nombre_tipo) {
         this.nombre_tipo = nombre_tipo;
     }
+
+    public int getId() {
+        return idUsuario;
+    }
+
+    public String getNombreTipo() {
+        return nombre_tipo;
+    }
     
     
     

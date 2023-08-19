@@ -6,14 +6,13 @@
 package View;
 
 import static View.Login.frmDashboard;
-import static View.Login.frmDashboard;
-import static View.Login.frmDashboard;
 import com.mysql.jdbc.Connection;
 import javax.swing.JOptionPane;
 import model.ConexionMysql;
 import model.Hash;
 import model.SqlUsuarios;
 import model.Usuarios;
+
 
 /**
  *
@@ -25,6 +24,8 @@ public class Registro extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
      Login frmLogin;
+     Registro frmRegistro;
+     
     
     ConexionMysql con = new ConexionMysql();
     Connection cn = con.conectar();
@@ -46,7 +47,7 @@ public class Registro extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         txtUsuario = new javax.swing.JTextField();
-        txtContraseña = new javax.swing.JTextField();
+        txtContraseña = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -168,9 +169,11 @@ public class Registro extends javax.swing.JFrame {
         Usuarios mod = new Usuarios();
 
         String pass = txtContraseña.getText();
-
+        
+    
         if (txtNombre.getText().equals("") || txtUsuario.getText().equals("") || pass.equals("") || txtCorreo.getText().equals("") || txtTelefono.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Llene todos los campos");
+         
 
         } else {
 
@@ -184,14 +187,21 @@ public class Registro extends javax.swing.JFrame {
                 mod.setCorreo(txtCorreo.getText());
                 mod.setTelefono(txtTelefono.getText());
                 mod.setTipoUsuario(2);
-
+               
                 if (modSql.registrar(mod)) {
+                    
+                    
                     JOptionPane.showMessageDialog(null, "Registro guardado");
                     limpiarCampos();
-
+                    dispose();
+                    
+                    
                     if(frmDashboard == null){
                         frmDashboard = new Dashboard();
                         frmDashboard.setVisible(true);
+                        frmRegistro.setVisible(false);
+                        dispose();
+                      
                     }
 
                 } else {
@@ -289,7 +299,7 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbName;
-    private javax.swing.JTextField txtContraseña;
+    private javax.swing.JPasswordField txtContraseña;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;

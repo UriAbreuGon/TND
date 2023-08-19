@@ -28,6 +28,7 @@ public class Login extends javax.swing.JFrame {
     public static Login frmLogin;
     public static DashboardAdmin frmDashboardAdmin;
     
+ 
     public Login() {
         initComponents();
     }
@@ -58,6 +59,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -142,10 +144,18 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img3/Union-oscuro.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -100, 1280, 720));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -70, 1280, 720));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logo-TND-fotor-20230731184540.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 370, 250));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 370, 250));
+
+        jButton4.setText("Cerrar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 10, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 720));
 
@@ -153,6 +163,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
         if(frmRegistro == null){
             frmRegistro = new Registro();
             frmRegistro.setVisible(true);
@@ -180,32 +191,40 @@ public class Login extends javax.swing.JFrame {
             mod.setUsuario(txtUsuario.getText());
             mod.setPassword(nuevoPass);
             mod.getTipoUsuario();
-
+           
+            
             if (modSql.login(mod)) {
-
+                dispose();
                 if (mod.getTipoUsuario() == 2) {
 
                     if (frmDashboard == null) {
                         frmDashboard = new Dashboard();
                         frmDashboard.setVisible(true);
+                        dispose();
+                    }   
                     }
-
-                } else if (mod.getTipoUsuario() == 1) {
-
-                    if (frmDashboardAdmin == null) {
-                        frmDashboardAdmin = new DashboardAdmin();
-                        frmDashboardAdmin.setVisible(true);
+                } else if (mod.getTipoUsuario() == 2) { 
+                    if (frmDashboard == null) {
+                        frmDashboard = new Dashboard();
+                        frmDashboard.setVisible(true);
+                        dispose();
 
                     }
                 }
+        
 
-            } else {
+             else {
                 JOptionPane.showMessageDialog(null, "Datos incorrecto");
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Ingrrese sus datos");
-        }                 
+            JOptionPane.showMessageDialog(null, "Ingrese sus datos");
+        }     
+
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,6 +266,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -262,4 +282,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtContraseña;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
+  
 }

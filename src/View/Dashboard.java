@@ -1,8 +1,10 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+
+import java.awt.BorderLayout;
 
 /**
  *
@@ -14,7 +16,16 @@ public class Dashboard extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     public Dashboard() {
+        
         initComponents();
+        Home p1 = new Home ();
+        p1.setSize(1140,660);
+        p1.setLocation(5,10);
+
+        content.removeAll();
+       content.add(p1, BorderLayout.CENTER);
+       content.revalidate();
+       content.repaint();
     }
 
     /**
@@ -36,20 +47,22 @@ public class Dashboard extends javax.swing.JFrame {
         rSButtonMaterialIconTwo2 = new RSMaterialComponent.RSButtonMaterialIconTwo();
         rSButtonMaterialIconTwo3 = new RSMaterialComponent.RSButtonMaterialIconTwo();
         rSButtonMaterialIconTwo4 = new RSMaterialComponent.RSButtonMaterialIconTwo();
-        jPanel4 = new javax.swing.JPanel();
+        content = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1260, 810));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(58, 66, 226));
+        jPanel2.setBackground(new java.awt.Color(0, 35, 121));
 
+        rSButtonIconTwo1.setBackground(new java.awt.Color(0, 35, 121));
         rSButtonIconTwo1.setHideActionText(true);
         rSButtonIconTwo1.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.MENU);
         rSButtonIconTwo1.setSizeIcon(50.0F);
 
-        jLabel1.setFont(new java.awt.Font("Perpetua", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SISTEMA DE TICKETS");
 
@@ -60,8 +73,8 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(rSButtonIconTwo1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 409, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1087, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,27 +85,27 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 70));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1560, 70));
 
         jPanel3.setForeground(new java.awt.Color(242, 242, 242));
 
         rSPanelMaterialImage1.setBackground(new java.awt.Color(242, 242, 242));
         rSPanelMaterialImage1.setBgShade(new java.awt.Color(242, 242, 242));
-        rSPanelMaterialImage1.setImagen(new javax.swing.ImageIcon(getClass().getResource("/View/images/LOGO.png"))); // NOI18N
+        rSPanelMaterialImage1.setImagen(new javax.swing.ImageIcon(getClass().getResource("/View/images/logo-TND.png"))); // NOI18N
 
         javax.swing.GroupLayout rSPanelMaterialImage1Layout = new javax.swing.GroupLayout(rSPanelMaterialImage1);
         rSPanelMaterialImage1.setLayout(rSPanelMaterialImage1Layout);
         rSPanelMaterialImage1Layout.setHorizontalGroup(
             rSPanelMaterialImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 145, Short.MAX_VALUE)
         );
         rSPanelMaterialImage1Layout.setVerticalGroup(
             rSPanelMaterialImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 125, Short.MAX_VALUE)
         );
 
         rSButtonMaterialIconTwo1.setBackground(new java.awt.Color(242, 242, 242));
-        rSButtonMaterialIconTwo1.setText("HOME");
+        rSButtonMaterialIconTwo1.setText("INICIO");
         rSButtonMaterialIconTwo1.setBackgroundHover(new java.awt.Color(242, 242, 242));
         rSButtonMaterialIconTwo1.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
         rSButtonMaterialIconTwo1.setForegroundHover(new java.awt.Color(0, 0, 0));
@@ -137,7 +150,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         rSButtonMaterialIconTwo4.setBackground(new java.awt.Color(242, 242, 242));
-        rSButtonMaterialIconTwo4.setText("TICKETS");
+        rSButtonMaterialIconTwo4.setText("BOLETOS");
         rSButtonMaterialIconTwo4.setBackgroundHover(new java.awt.Color(242, 242, 242));
         rSButtonMaterialIconTwo4.setFont(new java.awt.Font("Roboto Bold", 1, 18)); // NOI18N
         rSButtonMaterialIconTwo4.setForegroundHover(new java.awt.Color(0, 0, 0));
@@ -155,7 +168,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(rSPanelMaterialImage1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rSButtonMaterialIconTwo1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,12 +175,17 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(rSButtonMaterialIconTwo2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rSButtonMaterialIconTwo4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 2, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rSPanelMaterialImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(rSPanelMaterialImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rSButtonMaterialIconTwo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rSButtonMaterialIconTwo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,54 +193,85 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(rSButtonMaterialIconTwo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rSButtonMaterialIconTwo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 84, Short.MAX_VALUE))
+                .addGap(0, 385, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 420));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 740));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        content.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
+        content.setLayout(contentLayout);
+        contentLayout.setHorizontalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1180, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+        contentLayout.setVerticalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 700, 420));
+        jPanel1.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 1180, 680));
+        content.getAccessibleContext().setAccessibleDescription("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1342, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void rSButtonMaterialIconTwo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconTwo1ActionPerformed
-        // TODO add your handling code here:
+       Home p1 = new Home ();
+        p1.setSize(1140,660);
+        p1.setLocation(5,10);
+
+        content.removeAll();
+       content.add(p1, BorderLayout.CENTER);
+       content.revalidate();
+       content.repaint();   
     }//GEN-LAST:event_rSButtonMaterialIconTwo1ActionPerformed
 
     private void rSButtonMaterialIconTwo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconTwo4ActionPerformed
-        // TODO add your handling code here:
+     
+      Tickets p1 = new Tickets();
+        p1.setSize(1140,660);
+        p1.setLocation(5,10);
+
+        content.removeAll();
+       content.add(p1, BorderLayout.CENTER);
+       content.revalidate();
+       content.repaint();  
+       
     }//GEN-LAST:event_rSButtonMaterialIconTwo4ActionPerformed
 
     private void rSButtonMaterialIconTwo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconTwo3ActionPerformed
-        // TODO add your handling code here:
+         Tranporte p1 = new Tranporte ();
+        p1.setSize(1140,660);
+        p1.setLocation(5,10);
+
+        content.removeAll();
+       content.add(p1, BorderLayout.CENTER);
+       content.revalidate();
+       content.repaint();
     }//GEN-LAST:event_rSButtonMaterialIconTwo3ActionPerformed
 
     private void rSButtonMaterialIconTwo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMaterialIconTwo2ActionPerformed
-        // TODO add your handling code here:
+        ruta p1 = new ruta ();
+        p1.setSize(1140,660);
+        p1.setLocation(5,10);
+
+        content.removeAll();
+       content.add(p1, BorderLayout.CENTER);
+       content.revalidate();
+       content.repaint();
     }//GEN-LAST:event_rSButtonMaterialIconTwo2ActionPerformed
 
     /**
@@ -254,19 +302,17 @@ public class Dashboard extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Dashboard().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Dashboard().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel content;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private RSMaterialComponent.RSButtonIconTwo rSButtonIconTwo1;
     private RSMaterialComponent.RSButtonMaterialIconTwo rSButtonMaterialIconTwo1;
     private RSMaterialComponent.RSButtonMaterialIconTwo rSButtonMaterialIconTwo2;
@@ -274,4 +320,6 @@ public class Dashboard extends javax.swing.JFrame {
     private RSMaterialComponent.RSButtonMaterialIconTwo rSButtonMaterialIconTwo4;
     private RSMaterialComponent.RSPanelMaterialImage rSPanelMaterialImage1;
     // End of variables declaration//GEN-END:variables
+
+  
 }
